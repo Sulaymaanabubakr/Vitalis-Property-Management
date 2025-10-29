@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis Property Company | Luxury London Properties</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#top" class="logo">
+                <img src="https://res.cloudinary.com/demo/image/upload/v1731950000/vitalis-logo-gold.png" alt="Vitalis Property Company logo">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Lettings</a>
+                <a href="#services">Sales</a>
+                <a href="#services">Property Management</a>
+                <a href="#services">Maintenance</a>
+                <a href="#contact">Contact</a>
+                <a href="/admin.html" class="admin-link">Admin Login</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-gold">Book a Viewing</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero" id="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content" data-animate>
+                <h1>Find Your Next Home in London</h1>
+                <p>Trusted Property Experts Serving Landlords and Tenants Across the UK.</p>
+                <form class="hero-search" id="heroSearch">
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <select id="location" name="location">
+                            <option value="">Any</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="propertyType">Property Type</label>
+                        <select id="propertyType" name="propertyType">
+                            <option value="">Any</option>
+                            <option>Apartment</option>
+                            <option>House</option>
+                            <option>Penthouse</option>
+                            <option>Studio</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="minPrice">Min Price (£)</label>
+                        <input type="number" id="minPrice" placeholder="e.g. 1500">
+                    </div>
+                    <div class="form-group">
+                        <label for="maxPrice">Max Price (£)</label>
+                        <input type="number" id="maxPrice" placeholder="e.g. 5000">
+                    </div>
+                    <button type="submit" class="btn btn-gold">Search</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-image" data-animate>
+                <img src="https://res.cloudinary.com/demo/image/upload/v1731950000/london-street.jpg" alt="London property street view">
+            </div>
+            <div class="about-content" data-animate>
+                <h2>About Vitalis Property Company</h2>
+                <p>Vitalis Property Company is an independent estate and lettings agency based in London, providing exceptional services to landlords, buyers, and tenants. Our focus is quality, trust, and long-term relationships.</p>
+                <a href="/about.html" class="btn btn-outline">Learn More About Us</a>
+            </div>
+        </section>
+
+        <section class="featured" id="featured">
+            <div class="section-heading" data-animate>
+                <h2>Featured Properties</h2>
+                <p>Discover premium listings selected for you from across London and the United Kingdom.</p>
+            </div>
+            <div class="properties-grid" id="featuredProperties" aria-live="polite">
+                <!-- dynamic cards -->
+            </div>
+            <div class="cta-actions" data-animate>
+                <a href="/properties.html" class="btn btn-outline">View All Properties</a>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="section-heading" data-animate>
+                <h2>Our Services</h2>
+            </div>
+            <div class="service-cards">
+                <article class="service-card" data-animate>
+                    <span class="service-icon">🔑</span>
+                    <h3>Lettings</h3>
+                    <p>We help landlords and tenants find the perfect fit.</p>
+                </article>
+                <article class="service-card" data-animate>
+                    <span class="service-icon">🏠</span>
+                    <h3>Sales</h3>
+                    <p>Buy or sell with expert guidance.</p>
+                </article>
+                <article class="service-card" data-animate>
+                    <span class="service-icon">🏢</span>
+                    <h3>Property Management</h3>
+                    <p>Comprehensive management with peace of mind.</p>
+                </article>
+                <article class="service-card" data-animate>
+                    <span class="service-icon">🛠️</span>
+                    <h3>Maintenance</h3>
+                    <p>Fast and reliable repairs for your property.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="why" id="why">
+            <div class="why-content" data-animate>
+                <h2>Why Choose Vitalis?</h2>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <span>📍</span>
+                        <h3>Expert Local Knowledge</h3>
+                        <p>Our advisors live and work in the areas we cover, ensuring deep insight.</p>
+                    </div>
+                    <div class="why-item">
+                        <span>⚡</span>
+                        <h3>Quick Turnaround</h3>
+                        <p>Streamlined processes to minimise void periods and maximise returns.</p>
+                    </div>
+                    <div class="why-item">
+                        <span>🤝</span>
+                        <h3>Trusted by Landlords</h3>
+                        <p>We are proud to manage homes for discerning landlords across London.</p>
+                    </div>
+                    <div class="why-item">
+                        <span>✔️</span>
+                        <h3>Fully Licensed &amp; Insured</h3>
+                        <p>Compliance and protection come as standard when you work with us.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <div class="section-heading" data-animate>
+                <h2>What Our Clients Say</h2>
+            </div>
+            <div class="testimonial-carousel" id="testimonialCarousel" data-animate>
+                <button class="carousel-btn prev" aria-label="Previous testimonial">&#10094;</button>
+                <div class="testimonial-track">
+                    <!-- testimonials inserted via JS -->
+                </div>
+                <button class="carousel-btn next" aria-label="Next testimonial">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="cta" id="contact">
+            <div class="cta-content" data-animate>
+                <p>Looking to Let, Sell, or Manage Your Property? Contact Vitalis Today.</p>
+                <a href="/contact.html" class="btn btn-dark">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <img src="https://res.cloudinary.com/demo/image/upload/v1731950000/vitalis-logo-gold.png" alt="Vitalis Property Company" class="footer-logo">
+                <p>Unit 408, The Bon Marché Centre<br>241–251 Ferndale Road<br>London SW9 8BJ</p>
+                <p><strong>Phone:</strong> 020 7737 7339<br><strong>Email:</strong> info@vitalisproperty.com</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Lettings</a></li>
+                    <li><a href="#services">Sales</a></li>
+                    <li><a href="#services">Maintenance</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 5 3.66 9.14 8.44 9.93v-7.03H8.05v-2.9h2.39V9.83c0-2.37 1.42-3.69 3.58-3.69 1.04 0 2.12.19 2.12.19v2.33h-1.19c-1.17 0-1.54.73-1.54 1.48v1.78h2.63l-.42 2.9h-2.21v7.03C18.34 21.21 22 17.07 22 12.07Z"/></svg>
+                    </a>
+                    <a href="https://instagram.com" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2C5.35 4 4 5.35 4 7v10c0 1.65 1.35 3 3 3h10c1.65 0 3-1.35 3-3V7c0-1.65-1.35-3-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.51 4.51 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5Zm5.75-2.75a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25Z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM3 9h3.96v12H3zm6.5 0H13v1.72h.05c.55-1.03 1.9-2.12 3.92-2.12 4.2 0 4.97 2.76 4.97 6.36V21H18v-5.3c0-1.26-.02-2.88-1.76-2.88-1.76 0-2.03 1.37-2.03 2.78V21h-4.71z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 Vitalis Property Company. All rights reserved.</p>
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    </footer>
+
+    <script type="module" src="home.js"></script>
+</body>
+</html>
