@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis Property Company | Properties</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="properties.css">
+</head>
+<body>
+    <header class="properties-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Property Listings</h1>
+            <p>Explore every home and investment opportunity available with Vitalis.</p>
+        </div>
+    </header>
+
+    <main class="properties-main">
+        <section class="filter-bar" id="filters">
+            <div class="filter-group">
+                <label for="filterLocation">Location</label>
+                <select id="filterLocation">
+                    <option value="">All Locations</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filterType">Property Type</label>
+                <select id="filterType">
+                    <option value="">All Types</option>
+                    <option>Apartment</option>
+                    <option>House</option>
+                    <option>Penthouse</option>
+                    <option>Studio</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filterMin">Min Price (£)</label>
+                <input type="number" id="filterMin" placeholder="0">
+            </div>
+            <div class="filter-group">
+                <label for="filterMax">Max Price (£)</label>
+                <input type="number" id="filterMax" placeholder="10000">
+            </div>
+            <button class="btn btn-gold" id="applyFilters">Apply Filters</button>
+        </section>
+
+        <section class="properties-grid" id="propertiesGrid" aria-live="polite">
+            <!-- listings inserted via JS -->
+        </section>
+
+        <div class="pagination" id="pagination"></div>
+    </main>
+
+    <footer class="properties-footer">
+        <p>Looking for more information? <a href="/contact.html">Contact our team.</a></p>
+    </footer>
+
+    <script type="module" src="properties.js"></script>
+</body>
+</html>

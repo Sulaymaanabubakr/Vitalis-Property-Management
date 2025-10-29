@@ -1,0 +1,234 @@
+:root {
+    --primary: #1D2951;
+    --accent: #C7A008;
+    --background: #F9F9F9;
+    --text: #222222;
+    --white: #ffffff;
+    --max-width: 1200px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+}
+
+.properties-header {
+    position: relative;
+    height: 320px;
+    background: url('https://res.cloudinary.com/demo/image/upload/v1731950000/london-cityscape.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.header-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(29,41,81,0.85), rgba(17,24,43,0.7));
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.header-content h1 {
+    color: var(--white);
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+}
+
+.header-content p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.05rem;
+}
+
+.properties-main {
+    max-width: var(--max-width);
+    margin: -60px auto 4rem;
+    padding: 0 2rem;
+}
+
+.filter-bar {
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: end;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.5rem;
+    color: rgba(29,41,81,0.75);
+}
+
+.filter-group select,
+.filter-group input {
+    width: 100%;
+    padding: 0.75rem 0.85rem;
+    border-radius: 12px;
+    border: 1px solid rgba(29,41,81,0.15);
+    background: #fff;
+    font-size: 0.95rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.6rem;
+    border-radius: 999px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-gold {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.btn-gold:hover {
+    filter: brightness(1.05);
+}
+
+.properties-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.property-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    display: grid;
+    grid-template-rows: 220px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(29,41,81,0.18);
+}
+
+.property-card .image {
+    background: #ddd;
+    background-size: cover;
+    background-position: center;
+}
+
+.property-card .content {
+    padding: 1.5rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.property-card .price {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.property-card .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: rgba(34,34,34,0.65);
+}
+
+.pagination {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.pagination button {
+    background: #fff;
+    border: 1px solid rgba(29,41,81,0.15);
+    border-radius: 12px;
+    padding: 0.65rem 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.pagination button.active,
+.pagination button:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: transparent;
+}
+
+.properties-footer {
+    text-align: center;
+    padding: 3rem 2rem 4rem;
+    color: rgba(34,34,34,0.7);
+}
+
+.properties-footer a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.loading-card {
+    background: #f2f2f2;
+    border-radius: 20px;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(255,255,255,0));
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@media (max-width: 900px) {
+    .filter-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .filter-bar {
+        grid-template-columns: 1fr;
+    }
+}
